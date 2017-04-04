@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9E9E9E">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_contenido"
+        android:inputType="text"
+        android:hint="Contenido energetico"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_proteinas"
+        android:inputType="number"
+        android:hint="Proteinas"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_lipidos"
+        android:inputType="number"
+        android:hint="Lipidos"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_grasas"
+        android:inputType="number"
+        android:hint="Grasas"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_colesterol"
+        android:inputType="number"
+        android:hint="Colesterol"
+
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_carbohidratos"
+        android:inputType="number"
+        android:hint="Carbohidatros"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_azucares"
+        android:inputType="number"
+        android:hint="Azucares"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_fibra"
+        android:inputType="number"
+        android:hint="FIbra"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_sodio"
+        android:inputType="text"
+        android:hint="Sodio"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_calcio"
+        android:inputType="text"
+        android:hint="Calcio"
+
+        />
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_margin="@dimen/margin_button"
+            android:layout_width="@dimen/whidth_button"
+            android:layout_height="wrap_content"
+            android:text="@string/guardar"
+            android:id="@+id/bt_save"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            />
+        <Button
+            android:layout_margin="@dimen/margin_button"
+            android:layout_width="@dimen/whidth_button"
+            android:layout_height="wrap_content"
+            android:text="@string/listar"
+            android:id="@+id/bt_list"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            />
+    </LinearLayout>
+</LinearLayout>

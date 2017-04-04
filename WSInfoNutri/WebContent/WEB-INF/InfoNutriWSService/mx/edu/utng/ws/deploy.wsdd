@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from InfoNutriWSService WSDL service -->
+
+  <service name="InfoNutriWS" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws.utng.edu.mx"/>
+      <parameter name="wsdlServiceElement" value="InfoNutriWSService"/>
+      <parameter name="schemaQualified" value="http://ws.utng.edu.mx"/>
+      <parameter name="wsdlServicePort" value="InfoNutriWS"/>
+      <parameter name="className" value="mx.edu.utng.ws.InfoNutriWS"/>
+      <parameter name="wsdlPortType" value="InfoNutriWS"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://ws.utng.edu.mx" xmlns:retNS="http://ws.utng.edu.mx" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="addInfoNutri" qname="operNS:addInfoNutri" returnQName="retNS:addInfoNutriReturn" returnType="rtns:int" soapAction="">
+        <parameter xmlns:pns="http://ws.utng.edu.mx" xmlns:tns="http://ws.utng.edu.mx" qname="pns:infoNutri" type="tns:InfoNutri"/>
+      </operation>
+      <operation xmlns:operNS="http://ws.utng.edu.mx" xmlns:retNS="http://ws.utng.edu.mx" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="editInfoNutri" qname="operNS:editInfoNutri" returnQName="retNS:editInfoNutriReturn" returnType="rtns:int" soapAction="">
+        <parameter xmlns:pns="http://ws.utng.edu.mx" xmlns:tns="http://ws.utng.edu.mx" qname="pns:infoNutri" type="tns:InfoNutri"/>
+      </operation>
+      <operation xmlns:operNS="http://ws.utng.edu.mx" xmlns:retNS="http://ws.utng.edu.mx" xmlns:rtns="http://ws.utng.edu.mx" name="getInfoNutriByid" qname="operNS:getInfoNutriByid" returnQName="retNS:getInfoNutriByidReturn" returnType="rtns:InfoNutri" soapAction="">
+        <parameter xmlns:pns="http://ws.utng.edu.mx" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://ws.utng.edu.mx" xmlns:retNS="http://ws.utng.edu.mx" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="removeInfoNutri" qname="operNS:removeInfoNutri" returnQName="retNS:removeInfoNutriReturn" returnType="rtns:int" soapAction="">
+        <parameter xmlns:pns="http://ws.utng.edu.mx" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://ws.utng.edu.mx" xmlns:retNS="http://ws.utng.edu.mx" xmlns:rtns="http://ws.utng.edu.mx" name="getInfoNutris" qname="operNS:getInfoNutris" returnQName="retNS:getInfoNutrisReturn" returnType="rtns:InfoNutri" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="removeInfoNutri addInfoNutri getInfoNutris editInfoNutri getInfoNutriByid"/>
+
+      <typeMapping xmlns:ns="http://ws.utng.edu.mx" qname="ns:InfoNutri" type="java:mx.edu.utng.ws.InfoNutri" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>

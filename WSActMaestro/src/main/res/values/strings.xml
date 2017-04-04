@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WSActMaestro</string>
+    <string name="guardar">Guardar</string>
+    <string name="listar">Listar</string>
+</resources>
